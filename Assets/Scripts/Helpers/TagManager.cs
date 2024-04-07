@@ -17,3 +17,8 @@ public class AnimationTags
     public const string LAST_MOVE_X_FLOAT = "LastMoveX";
     public const string LAST_MOVE_Y_FLOAT = "LastMoveY";
 }
+
+public class Tags
+{
+    public const string PLAYER_TAG = "Player";
+}

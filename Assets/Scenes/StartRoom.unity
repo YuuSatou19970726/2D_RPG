@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 1485746747376791950}
   - component: {fileID: 1582332580592674802}
   - component: {fileID: 1531254278595202088}
+  - component: {fileID: 1582332580592674803}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -286,6 +287,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500748064917345474}
   m_Enabled: 1
+--- !u!114 &1582332580592674803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500748064917345474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf1610c92213004c87f85314f0ef9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 2457139897862565637}
+  moveSpeed: 100
 --- !u!212 &2371403400233950439
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -594,6 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2488389271524640740}
   - component: {fileID: 2488389271524640762}
+  - component: {fileID: 2488389271524640763}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -646,6 +662,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &2488389271524640763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488389271524640761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe32cb051c12492429118c385ca57848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: MainScreen
+  exitPoint: ToStartroom
 --- !u!50 &2497287610079068973
 Rigidbody2D:
   serializedVersion: 4
