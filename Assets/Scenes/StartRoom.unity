@@ -326,7 +326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1027781067
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 532bbe56e4113a1479b51268899dcc03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 2542441159697092911}
   - component: {fileID: 2504411392438499417}
   - component: {fileID: 2497287610079068973}
+  - component: {fileID: 2542441159697092912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -385,7 +386,6 @@ GameObject:
   - component: {fileID: 2457310267316711732}
   - component: {fileID: 2457310267316711731}
   - component: {fileID: 2457310267316711730}
-  - component: {fileID: 2457310267316711733}
   m_Layer: 0
   m_Name: WoodSword
   m_TagString: Untagged
@@ -506,18 +506,6 @@ Transform:
   - {fileID: 2457310267804478558}
   m_Father: {fileID: 2457310267478910512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2457310267316711733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457310267316711729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2457310267478910512
 Transform:
   m_ObjectHideFlags: 0
@@ -751,6 +739,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2542441159697092912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457139897862565637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e47bae1e504f345973d45a68bf4912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  panel: {fileID: 0}
+  lastMove: {x: 0, y: 0}
+  attackingTime: 0.15
+  startPoint: 
 --- !u!4 &2725758145758590866
 Transform:
   m_ObjectHideFlags: 0
@@ -915,7 +920,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2777082588738369417}
-  - component: {fileID: 2777082588738369418}
   m_Layer: 5
   m_Name: DeathMenu
   m_TagString: Untagged
@@ -945,18 +949,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000011444, y: 0.000011444}
   m_SizeDelta: {x: 160.6, y: 160.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2777082588738369418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2777082588738369416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2777082588827457128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1070,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2777082588738369418}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Quit
         m_Mode: 1
@@ -1379,7 +1371,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2777082588738369418}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Quit
         m_Mode: 1
