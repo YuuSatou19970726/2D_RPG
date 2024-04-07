@@ -40,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Vector3 pos = transform.position;
+        // pos.z = 0;
+        // transform.position = pos;
+
         Movement();
     }
 
@@ -83,10 +87,53 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(AnimationTags.PLAYER_ATTACKING_BOOL, false);
         }
 
+        GetInput();
+
         anim.SetFloat(AnimationTags.MOVE_X_FLOAT, Input.GetAxisRaw(Axis.HORIZONTAL_AXIS));
         anim.SetFloat(AnimationTags.MOVE_Y_FLOAT, Input.GetAxisRaw(Axis.VERTICAL_AXIS));
         anim.SetBool(AnimationTags.PLAYER_MOVING_BOOL, playerMoving);
         anim.SetFloat(AnimationTags.LAST_MOVE_X_FLOAT, lastMove.x);
         anim.SetFloat(AnimationTags.LAST_MOVE_Y_FLOAT, lastMove.y);
+    }
+
+    void GetInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            attackTimeCounter = attackingTime;
+            attacking = true;
+            myBody.velocity = Vector3.zero;
+            anim.SetBool(AnimationTags.PLAYER_ATTACKING_BOOL, true);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(Tags.PICKABLE_1_TAG))
+        {
+            Score.instance.ScoreUp();
+            PlayerHPmanager.instance.playerCurrentHealth += 3.5f;
+            other.gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag(Tags.PICKABLE_2_TAG))
+        {
+            Score.instance.ScoreUp();
+            PlayerHPmanager.instance.playerCurrentHealth += 6.5f;
+            other.gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag(Tags.PICKABLE_3_TAG))
+        {
+            Score.instance.ScoreUp();
+            PlayerHPmanager.instance.playerCurrentHealth += 9f;
+            other.gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag(Tags.FINISH_TAG))
+        {
+            panel.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

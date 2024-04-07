@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1087363432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087363434}
+  - component: {fileID: 1087363433}
+  m_Layer: 0
+  m_Name: Destination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1087363433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087363432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9732e2743650a4c9f85197efb31f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDirection: {x: 0, y: 0}
+  point: Out Room
+--- !u!4 &1087363434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087363432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: -34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2631719956862603920
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2631719956862603923}
   - component: {fileID: 2631719956862603922}
+  - component: {fileID: 2631719956862603924}
   m_Layer: 0
   m_Name: ToGrave
   m_TagString: Untagged
@@ -200,6 +247,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2631719956862603924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2631719956862603920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe32cb051c12492429118c385ca57848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Grave
+  exitPoint: Into Grave
 --- !u!1 &3355569244038994859
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3355569244038994862}
   - component: {fileID: 3355569244038994861}
+  - component: {fileID: 3355569244038994863}
   m_Layer: 0
   m_Name: FromForrest
   m_TagString: Untagged
@@ -277,6 +339,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3355569244038994863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355569244038994859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9732e2743650a4c9f85197efb31f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDirection: {x: 0, y: 0}
+  point: Forrest Out
 --- !u!1 &3596351845207347384
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3596351845207347391}
   - component: {fileID: 3596351845207347385}
-  - component: {fileID: 3596351845207347390}
+  - component: {fileID: 3596351845207347392}
   m_Layer: 0
   m_Name: FromGrave
   m_TagString: Untagged
@@ -340,18 +416,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 8}
   m_EdgeRadius: 0
---- !u!114 &3596351845207347390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3596351845207347384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &3596351845207347391
 Transform:
   m_ObjectHideFlags: 0
@@ -367,6 +431,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3596351845207347392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596351845207347384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9732e2743650a4c9f85197efb31f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDirection: {x: 0, y: 0}
+  point: Grave Out
 --- !u!1 &4844575442513094322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,6 +3583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6885767688661072740}
   - component: {fileID: 6885767688661072741}
+  - component: {fileID: 6885767688661072744}
   m_Layer: 0
   m_Name: ToShed
   m_TagString: Untagged
@@ -3512,6 +3591,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6885767688661072744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885767688661072743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe32cb051c12492429118c385ca57848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Shed
+  exitPoint: Into Shed
 --- !u!4 &7697377817718079896
 Transform:
   m_ObjectHideFlags: 0
@@ -3582,6 +3675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7697377817718079896}
   - component: {fileID: 7697377817718079899}
+  - component: {fileID: 7697377817718079902}
   m_Layer: 0
   m_Name: ToForrest
   m_TagString: Untagged
@@ -3589,6 +3683,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7697377817718079902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697377817718079901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe32cb051c12492429118c385ca57848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Forrest
+  exitPoint: Into Forrest
 --- !u!61 &8883618204956349356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3659,6 +3767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8883618204956349357}
   - component: {fileID: 8883618204956349356}
+  - component: {fileID: 8883618204956349359}
   m_Layer: 0
   m_Name: FromShed
   m_TagString: Untagged
@@ -3666,6 +3775,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8883618204956349359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8883618204956349358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9732e2743650a4c9f85197efb31f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDirection: {x: 0, y: 0}
+  point: Shed Out
 --- !u!4 &9081945258543632243
 Transform:
   m_ObjectHideFlags: 0
@@ -3736,6 +3859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9081945258543632243}
   - component: {fileID: 9081945258543632244}
+  - component: {fileID: 9081945258543632247}
   m_Layer: 0
   m_Name: ToStartroom
   m_TagString: Untagged
@@ -3743,14 +3867,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9081945258543632247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081945258543632246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe32cb051c12492429118c385ca57848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: StartRoom
+  exitPoint: Into Room
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 4844575444543549270}
-  - {fileID: 3355569244038994862}
-  - {fileID: 7697377817718079896}
   - {fileID: 9081945258543632243}
+  - {fileID: 1087363434}
+  - {fileID: 7697377817718079896}
+  - {fileID: 3355569244038994862}
   - {fileID: 6885767688661072740}
   - {fileID: 8883618204956349357}
   - {fileID: 2631719956862603923}

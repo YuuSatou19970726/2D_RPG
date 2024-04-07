@@ -21,4 +21,14 @@ public class AnimationTags
 public class Tags
 {
     public const string PLAYER_TAG = "Player";
+    public const string ENEMY_TAG = "Enemy";
+    public const string PICKABLE_1_TAG = "Pickable";
+    public const string PICKABLE_2_TAG = "Pickable2";
+    public const string PICKABLE_3_TAG = "Pickable3";
+    public const string FINISH_TAG = "Finish";
+}
+
+public class GameObjectNames
+{
+    public const string PLAYER_NAME = "Player";
 }
